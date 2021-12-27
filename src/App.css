@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: lightblue;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.titleLogo {
+  text-align: center;
+  border: 5px solid purple;
+  width: fit-content;
+  padding: 20px;
+  background: skyblue;
+  color: purple;
+}
+
+.titleLogo h1 {
+  font-size: 52px;
+}
+
+button {
+  margin: 15px;
+  background: purple;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:active {
+  background: white;
+  color: blue;
+  transition: 200ms;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gameBoard {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameTile {
+  width: 32%;
+  height: 32%;
+  margin: 0px 2px 0px 2px;
+  background: white;
+  color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+.filled {
+  background-color: deeppink;
+}
+
+.gameTile:active {
+  transition: 200ms;
+  background: grey;
+}
+
+.winnerModal {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 25vh;
+  text-align: center;
+  color: purple;
+  background: skyblue;
+  border: 2px solid black;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 3px 4px gray;
+}
+
+.message {
+  color: purple;
+  padding: 5px;
+  font-size: large;
 }
